@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
 	  end
   })
 
-  use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+  use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdateSync'})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
@@ -49,8 +49,6 @@ return require('packer').startup(function(use)
 	  }
   }
 
-  use("folke/zen-mode.nvim")
-  use("github/copilot.vim")
-
+  use('christoomey/vim-tmux-navigator')
 end)
 
