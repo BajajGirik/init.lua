@@ -42,3 +42,7 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Removing current buffer command
 vim.keymap.set("n", "<leader>bd", ":bd<CR>")
+
+-- Move between buffers
+vim.keymap.set("n", "<leader><Left>", ":bprev<CR>")
+vim.keymap.set("n", "<leader><Right>", ":bnext<CR>")
