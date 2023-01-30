@@ -31,3 +31,8 @@ autocmd({"BufWritePre"}, {
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+-- This is done because quickfix list is having no mapping for <CR>
+-- somehow and due to this we are not able to navigate to a file that
+-- is listed in it...
+vim.cmd("autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>")
