@@ -51,5 +51,6 @@ return require('packer').startup(function(use)
 
   use('christoomey/vim-tmux-navigator')
   use("numToStr/Comment.nvim") -- commenting code plugin
+  use('lewis6991/gitsigns.nvim')
 end)
 
