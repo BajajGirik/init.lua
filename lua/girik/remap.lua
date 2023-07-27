@@ -41,8 +41,12 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Removing current buffer command
-vim.keymap.set("n", "<leader>bd", ":bd<CR>")
+vim.keymap.set("n", "<leader>c", ":bd<CR>")
 
 -- Move between buffers
 vim.keymap.set("n", "<leader><Left>", ":bprev<CR>")
 vim.keymap.set("n", "<leader><Right>", ":bnext<CR>")
+
+-- Remove BufWritePre (Which removes trailing spaces)
+-- I need it to be removed for certain projects which are not well indented
+vim.keymap.set("n", "<leader><CR>", ":set eventignore=BufWritePre<CR>")
