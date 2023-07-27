@@ -4,6 +4,5 @@ vim.keymap.set('n', '<leader>fW', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fw', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
-vim.keymap.set('n', '<leader>gr', builtin.lsp_references, {})
-vim.keymap.set('n', '<leader>gs', builtin.lsp_document_symbols, {})
-vim.keymap.set('n', '<leader>gS', builtin.lsp_dynamic_workspace_symbols, {})
+vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
+
